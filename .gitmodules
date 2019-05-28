@@ -6,7 +6,7 @@
 	url = git://github.com/FNA-XNA/FAudio.git
 [submodule "lib/MojoShader"]
 	path = lib/MojoShader
-	url = git://github.com/FNA-XNA/MojoShader.git
+	url = git://github.com/kg/MojoShader.git
 [submodule "lib/Theorafile"]
 	path = lib/Theorafile
 	url = git://github.com/FNA-XNA/Theorafile.git
