@@ -98,5 +98,13 @@ namespace Microsoft.Xna.Framework.Graphics
 		/// Unsigned 32-bit ABGR pixel format for store 8 bits per channel (XNA3)
 		/// </summary>
 		ColorBgraEXT,
+		/// <summary>
+		/// Unsigned 32-bit ARGB pixel format where the R/G/B values are stored in a non-linear sRGB representation.
+		/// </summary>
+		ColorSrgbEXT,
+		/// <summary>
+		/// DXT5 block texture format where the R/G/B values are non-linear sRGB.
+		/// </summary>
+		Dxt5SrgbEXT
 	}
 }
