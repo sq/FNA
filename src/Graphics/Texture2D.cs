@@ -85,7 +85,8 @@ namespace Microsoft.Xna.Framework.Graphics
 				format != SurfaceFormat.HalfSingle &&
 				format != SurfaceFormat.HalfVector2 &&
 				format != SurfaceFormat.HalfVector4 &&
-				format != SurfaceFormat.HdrBlendable	)
+				format != SurfaceFormat.HdrBlendable &&
+				format != SurfaceFormat.ColorSrgbEXT	)
 			{
 				Format = SurfaceFormat.Color;
 			}
