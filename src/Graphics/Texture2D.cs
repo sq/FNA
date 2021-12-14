@@ -516,6 +516,8 @@ namespace Microsoft.Xna.Framework.Graphics
 				format
 			);
 
+			int levelWidth = width, levelHeight = height;
+
 			byte[] tex = null;
 			if (	stream is MemoryStream &&
 				((MemoryStream) stream).TryGetBuffer(out tex)	)
@@ -533,9 +535,11 @@ namespace Microsoft.Xna.Framework.Graphics
 						levelSize,
 						SeekOrigin.Current
 					);
-					levelSize = Math.Max(
-						levelSize >> 2,
-						blockSize
+					levelWidth /= 2;
+					levelHeight /= 2;
+					levelSize = (
+						((levelWidth > 0 ? ((levelWidth + 3) / 4) : 1) * blockSize) *
+						(levelHeight > 0 ? ((levelHeight + 3) / 4) : 1)
 					);
 				}
 			}
@@ -551,9 +555,11 @@ namespace Microsoft.Xna.Framework.Graphics
 						0,
 						tex.Length
 					);
-					levelSize = Math.Max(
-						levelSize >> 2,
-						blockSize
+					levelWidth /= 2;
+					levelHeight /= 2;
+					levelSize = (
+						((levelWidth > 0 ? ((levelWidth + 3) / 4) : 1) * blockSize) *
+						(levelHeight > 0 ? ((levelHeight + 3) / 4) : 1)
 					);
 				}
 			}
