@@ -125,11 +125,22 @@ namespace Microsoft.Xna.Framework.Graphics
 			);
 		}
 
-		#endregion
+        protected Texture2D (
+			GraphicsDevice graphicsDevice, int width, int height, int levelCount, SurfaceFormat format, IntPtr texture
+		) {
+			GraphicsDevice = graphicsDevice;
+			Width = width;
+			Height = height;
+			LevelCount = levelCount;
+			Format = format;
+			this.texture = texture;
+        }
 
-		#region Public SetData Methods
+        #endregion
 
-		public void SetData<T>(T[] data) where T : struct
+        #region Public SetData Methods
+
+        public void SetData<T>(T[] data) where T : struct
 		{
 			SetData(
 				0,
